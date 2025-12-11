@@ -3,8 +3,8 @@ let button = document.getElementById("button")
 let kosik = document.getElementById("kosik")
 let score = 0;
 let clickPower = 1;
-let price = 100;
-let autoScore = 1;
+let price = 1;
+let autoScore = 0;
 
 button.onclick = function (e){
     score += clickPower;
@@ -24,9 +24,9 @@ kosik.onclick = function (e){
 
 function startAutoScore(autoScore) {
     autoInterval = setInterval(() => {
-        score += 1;   // kolik se má přičítat automaticky
-        updateScore();
-    }, 1000);        // 1000 ms = 1 sekunda
+        score += autoScore;
+        odstavec.textContent = score;
+    }, 3000);
 }
 
 
