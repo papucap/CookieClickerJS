@@ -31,6 +31,18 @@ body {
     padding: 10px 20px;
 }
 
+#reset{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(118, 59, 0, 0.5);
+    border-radius: 20px;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
 #kosik{
     position: relative;
     background-color: rgba(118, 59, 0, 0.5);
@@ -38,7 +50,7 @@ body {
     border: none;
     color: inherit;
     cursor: pointer;
-    left: 20px;
+    left: 100px;
     top: 20px;
 }
 
@@ -80,16 +92,13 @@ body {
 }
 
 #close{
-    position: absolute;
-    top: 100px;
-    right: 430px;
+    position: relative;
+    bottom: 210px;
+    left: 70px;
     background-color: transparent;
-    font-family: 'Seven Segment', monospace;
     border-radius: 20px;
     border: none;
-    color: inherit;
     cursor: pointer;
-    padding: 5px 10px;
 }
 
 #button :active{

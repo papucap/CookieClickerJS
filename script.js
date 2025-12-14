@@ -6,10 +6,11 @@ let kosik = document.getElementById("kosik")
 let autoclick = document.getElementById("auto")
 let autoPocet = document.getElementById("autoPocet");
 let klikPocet = document.getElementById("klikPocet");
+let reset = document.getElementById("reset");
 let score = 0;
 let clickPower = 1;
-let price = 1;
-let price2 = 1;
+let price = 100;
+let price2 = 100;
 let autoScore = 0;
 
 button.onclick = function (e){
@@ -44,12 +45,30 @@ autoclick.onclick = function (e){
     }
 }
 
+reset.onclick = function (e){
+    score = 0;
+    clickPower = 1;
+    autoScore == 0;
+    stopAutoScore();
+    cena1.textContent = 100;
+    cena2.textContent = 100;
+    price = 100;
+    price2 = 100;
+    odstavec.textContent = score;
+    klikPocet.textContent = clickPower;
+    autoPocet.textContent = autoScore + "/s";
+
+}
 
 function startAutoScore(autoScore) {
     autoInterval = setInterval(() => {
         score += autoScore;   
         odstavec.textContent = score;
     }, 1000);
+}
+
+function stopAutoScore() {
+    clearInterval(autoInterval);
 }
 
 function openShop() {
